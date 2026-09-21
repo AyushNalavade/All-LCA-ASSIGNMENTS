@@ -1,11 +1,14 @@
-def triangle():
-  s1=int(input("Enter the first side of the triangle:"))
-  s2=int(input("Enter the second side of the triangle:"))
-  s3=int(input("Enter the third side of the triangle:"))
-  if s1==s2 and s2==s3:
-    print("The triangle is equilateral")
-  elif s1==s2 or s2==s3 or s1==s3:
-    print("The triangle is isoceles")
+def right_triangle(side1,side2,side3):
+  sides=sorted([side1,side2,side3])
+  if sides[0]**2 + sides[1]**2==sides[2]**2:
+    return True
   else:
-    print("The triangle is scalene")
-triangle()    
+    return False
+a=int(input("Enter length of first side:"))
+b=int(input("Enter length of second side:"))
+c=int(input("Enter length of third side:"))
+if right_triangle(a,b,c)==True:
+  print("The triangle is a right angled triangle")
+else:
+  print("The triangle is not a right angled triangle")
+  
