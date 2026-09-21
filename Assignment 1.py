@@ -1,75 +1,28 @@
-# Program to perform Add, Delete and Update
-# operations on List, Tuple and Dictionary
+student_list=["Amit","Priya","Rahul"]
+student_list.append("Ishaan")
+print(student_list)
+student_list.remove("Amit")
+print(student_list)
+student_list[1]="Isha"
+print(student_list)
 
-# ---------------- LIST ----------------
+student_tuple=("Aaryan","Rohan","Sneha")
+converted_list=list(student_tuple)
+converted_list.append("Ishita")
+student_tuple=tuple(converted_list)
+print(student_tuple)
+converted_list.remove("Rohan")
+student_tuple=tuple(converted_list)
+print(student_tuple)
+converted_list[1]="Aniket"
+student_tuple=tuple(converted_list)
+print(student_tuple)
 
-students_list = ["Rahul", "Amit", "Sneha", "Priya"]
-
-print("Original List:")
-print(students_list)
-
-# Add
-students_list.append("Rohan")
-print("\nAfter Adding Rohan:")
-print(students_list)
-
-# Delete
-students_list.remove("Amit")
-print("\nAfter Deleting Amit:")
-print(students_list)
-
-# Update
-students_list[1] = "Neha"
-print("\nAfter Updating:")
-print(students_list)
-
-
-# ---------------- TUPLE ----------------
-
-students_tuple = ("Rahul", "Amit", "Sneha", "Priya")
-
-print("\nOriginal Tuple:")
-print(students_tuple)
-
-# Add using concatenation
-students_tuple = students_tuple + ("Rohan",)
-print("\nAfter Adding Rohan:")
-print(students_tuple)
-
-# Delete using slicing
-students_tuple = students_tuple[:1] + students_tuple[2:]
-print("\nAfter Deleting Amit:")
-print(students_tuple)
-
-# Update by creating a new tuple
-students_tuple = ("Rahul", "Neha", "Sneha", "Priya", "Rohan")
-print("\nAfter Updating:")
-print(students_tuple)
-
-
-# ---------------- DICTIONARY ----------------
-
-students_dict = {
-    101: "Rahul",
-    102: "Amit",
-    103: "Sneha",
-    104: "Priya"
-}
-
-print("\nOriginal Dictionary:")
-print(students_dict)
-
-# Add
-students_dict[105] = "Rohan"
-print("\nAfter Adding Rohan:")
-print(students_dict)
-
-# Delete
-students_dict.pop(102)
-print("\nAfter Deleting Amit:")
-print(students_dict)
-
-# Update
-students_dict[103] = "Neha"
-print("\nAfter Updating:")
-print(students_dict)
+student_dict={20:"Amit",21:"Priya",22:"Rahul"}
+student_dict[23]="Ishaan"
+print(student_dict)
+del student_dict[22]
+print(student_dict)
+student_dict.update({22:"Sneha",23:"Ayush"})
+print(student_dict)
+              
