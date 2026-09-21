@@ -12,3 +12,4 @@ if right_triangle(a,b,c)==True:
 else:
   print("The triangle is not a right angled triangle")
   
+  
