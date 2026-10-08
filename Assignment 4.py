@@ -1,31 +1,26 @@
+## Assignment4
+
+import numpy as np
+
+# Enter size of matrix
 rows = int(input("Enter number of rows: "))
 columns = int(input("Enter number of columns: "))
 
-A = []
-B = []
+# Create empty matrices
+A = np.zeros((rows, columns), dtype=int)
+B = np.zeros((rows, columns), dtype=int)
 
-print("Enter elements of first matrix:")
+# Enter elements of first matrix
+print("\nEnter elements of first matrix:")
 for i in range(rows):
-    row = []
     for j in range(columns):
-        row.append(int(input()))
-    A.append(row)
+        A[i][j] = int(input("Enter element: "))
 
-print("Enter elements of second matrix:")
+# Enter elements of second matrix
+print("\nEnter elements of second matrix:")
 for i in range(rows):
-    row = []
     for j in range(columns):
-        row.append(int(input()))
-    B.append(row)
+        B[i][j] = int(input("Enter element: "))
 
-C = []
-
-for i in range(rows):
-    row = []
-    for j in range(columns):
-        row.append(A[i][j] + B[i][j])
-    C.append(row)
-
-print("Addition of two matrices:")
-for row in C:
-    print(row)
+# Add the two matrices
+C = np.add(A, B)
