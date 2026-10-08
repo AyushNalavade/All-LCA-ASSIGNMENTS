@@ -1,4 +1,4 @@
-# Write a python program to find the largest of three numbers
+# Assignment 2
 num1 = int(input("Enter a number: "))
 num2 = int(input("Enter a number: "))
 num3 = int(input("Enter a number: "))
