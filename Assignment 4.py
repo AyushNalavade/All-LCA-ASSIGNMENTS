@@ -20,7 +20,7 @@ for i in range(rows):
 print("\nEnter elements of second matrix:")
 for i in range(rows):
     for j in range(columns):
-        B[i][j] = int(input("Enter element: "))
+        B[i][j] = int(input("Enter element: ")) 
 
 # Add the two matrices
 C = np.add(A, B)
